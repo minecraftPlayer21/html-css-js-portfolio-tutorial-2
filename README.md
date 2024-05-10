@@ -1,4 +1,4 @@
-Hey! Here is an overview of My Coding Portfolio!
+So glad you clicked :))
 
 # Beginner for Web Dev Coding Portfolio
 
