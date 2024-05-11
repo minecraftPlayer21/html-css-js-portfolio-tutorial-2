@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <div id="particles-js"></div> <!-- Particle container -->
+
+    
     <nav id="desktop-nav">
       <div class="logo">Malak Khalifa</div>
       <div>
@@ -16,6 +19,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#blogs" onclick="toggleMenu()">Blogs</a></li>  <!-- Added Blogs Link -->
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -32,21 +36,25 @@
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#blogs">Blogs</a></li>  <!-- Added Blogs Link -->
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
     <section id="profile">
-      <div class="section__pic-container">
+      <div class="section__pic-container float-effect">
         <img
-          src="./assets/pngtree-a-young-woman-sitting-at-a-table-writing-code-on-the-computer-picture-image_7912173.png"
-          alt="John Doe profile picture"
+          src="./assets/pngtree-code-clipart-illustration-of-a-girl-using-her-computer-cartoon-vector-png-image_11076382.png"
+          alt="Malak Khalifa profile picture"
         />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Malak Khalifa</h1>
-        <p class="section__text__p2">Beginner Frontend Developer</p>
+
+        
+        <p class="section__text__p2"><span id="typed-text"></span></p>
+
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -351,6 +359,69 @@
         onclick="location.href='./#contact'"
       />
     </section>
+
+<!-- Blogs Section Start -->
+<section id="blogs">
+  <p class="section__text__p1">Check Out My</p>
+  <h1 class="title">Latest Blogs</h1>
+  <div class="blogs-details-container">
+    <div class="about-containers">
+      <!-- Example Blog Entry -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/cute-girl-working-on-computer-cartoon-icon-illustration-people-and-technology-icon-concept-isolated-premium-flat-cartoon-style-vector.jpg"
+            alt="Blog Post Sample"
+            class="blog-img"
+          />
+        </div>
+        <h2 class="experience-sub-title blog-title">
+          How I Started With Frontend Development
+        </h2>
+        <p class="blog-description">
+          A brief journey through my initial steps in the world of frontend development, covering the challenges and milestones. This post explores the tools and resources that helped me get started and the projects that I tackled in the early stages of my learning path.
+        </p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 blog-btn" onclick="location.href='https://blog-link.com'">
+            Read More
+          </button>
+        </div>
+      </div>
+      <!-- Additional Example Blog Entry -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/cute-girl-working-on-computer-cartoon-icon-illustration-people-and-technology-icon-concept-isolated-premium-flat-cartoon-style-vector.jpg"
+            alt="Design Tips for Developers"
+            class="blog-img"
+          />
+        </div>
+        <h2 class="experience-sub-title blog-title">
+          Design Tips for Developers
+        </h2>
+        <p class="blog-description">
+          Discover essential design principles that every developer should know. This blog covers the basics of color theory, typography, and UI/UX design to enhance the aesthetic appeal of your web applications.
+        </p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 blog-btn" onclick="location.href='https://blog-link.com'">
+            Read More
+          </button>
+        </div>
+      </div>
+      <!-- You can continue adding more blog entries here following the same structure -->
+    </div>
+  </div>
+  <img
+    src="./assets/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#contact'"
+  />
+</section>
+<!-- Blogs Section End -->
+
+
+
     <section id="contact">
       <p class="section__text__p1">Let us Get in Touch</p>
       <h1 class="title">Contact Me...</h1>
@@ -380,12 +451,17 @@
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#blogs">Blogs</a></li>  <!-- Added Blogs Link -->
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
       <p>Copyright &#169; 2024 MK. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <script src="script.js"></script>
+    <script src="particles.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
