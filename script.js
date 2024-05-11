@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
       opacity: {
-        value: 0.8,
+        value: 0.9,
         random: false,
         anim: {
           enable: false,
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         enable: true,
         distance: 150,
         color: "#cccccc",
-        opacity: 0.6,
+        opacity: 0.7,
         width: 2,
       },
       move: {
