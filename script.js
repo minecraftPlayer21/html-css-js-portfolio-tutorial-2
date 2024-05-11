@@ -216,3 +216,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setTimeout(type, newTextDelay + 250);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const phrases = ["Why I Started?", "The Purpose?", "My Journey..."];
+  const initialPhrase = "About Me";
+  const typedAbout = document.getElementById("typed-about");
+  const cursorAbout = document.querySelector(".cursor-about");
+  let currentPhrase = [];
+  let phraseIndex = 0;
+  let letterIndex = 0;
+  let isDeleting = false;
+  let timer;
+  let isInitial = true;
+
+  function type() {
+    if (isDeleting) {
+      if (letterIndex <= 0) {
+        currentPhrase = [];
+        isDeleting = false;
+        if (isInitial) {
+          isInitial = false;
+          phraseIndex = 0;
+        } else {
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+        timer = setTimeout(type, 500);
+      } else {
+        currentPhrase.pop();
+        letterIndex--;
+        timer = setTimeout(type, 100);
+      }
+    } else {
+      let fullText = isInitial ? initialPhrase : phrases[phraseIndex];
+      if (letterIndex === fullText.length) {
+        if (isInitial) {
+          isDeleting = true; // Start deleting "About Me" after it is fully typed
+          timer = setTimeout(type, 2000); // Delay before starting to delete
+        } else {
+          timer = setTimeout(function () {
+            isDeleting = true;
+            type();
+          }, 1500);
+        }
+      } else {
+        currentPhrase.push(fullText.charAt(letterIndex));
+        letterIndex++;
+        timer = setTimeout(type, 100);
+      }
+    }
+    typedAbout.textContent = currentPhrase.join("");
+  }
+
+  type(); // Start the typing effect
+});

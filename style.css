@@ -595,3 +595,34 @@ body {
     opacity: 0;
   }
 }
+
+.cursor-about {
+  display: inline-block;
+  background-color: black;
+  margin-left: 5px;
+  animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Keyframes for continuous fade-in and fade-out effect */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(10px); /* Slight movement for a dynamic feel */
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Applying the continuous animation to the about picture */
+.about-pic {
+  animation: fadeInOut 3s ease-in-out infinite; /* Loop the animation forever */
+}
