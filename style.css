@@ -626,3 +626,19 @@ body {
 .about-pic {
   animation: fadeInOut 3s ease-in-out infinite; /* Loop the animation forever */
 }
+
+/* Scale animation for education and experience boxes */
+@keyframes scale-up {
+  from {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.details-container:hover {
+  animation: scale-up 0.3s ease forwards; /* Make the animation play forwards and stick to the end state */
+}
