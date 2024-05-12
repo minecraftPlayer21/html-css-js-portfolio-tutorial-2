@@ -192,3 +192,51 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12); /* Adjust hover shadow for subtlety */
   }
 }
+/* Media Queries for Projects and Blogs Section with Mint Green */
+
+@media screen and (max-width: 1200px) {
+  #projects .details-container,
+  #blogs .details-container {
+    /* Apply mint green color and appropriate styling for smaller screens */
+    background-color: rgba(245, 255, 250, 0.1); /* Very light mint green */
+    border: 2px solid rgba(60, 179, 113, 0.6); /* Soft mint green border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  #projects .details-container:hover,
+  #blogs .details-container:hover {
+    background-color: rgba(245, 255, 250, 0.7); /* Less transparent on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #projects .details-container,
+  #blogs .details-container {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+    border-radius: 15px; /* Smaller radius for smaller devices */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #projects .details-container,
+  #blogs .details-container {
+    border: 1px solid rgba(60, 179, 113, 0.5); /* Thinner border for a finer look on small devices */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lesser shadow for subtlety */
+  }
+
+  #projects .details-container:hover,
+  #blogs .details-container:hover {
+    background-color: rgba(
+      245,
+      255,
+      250,
+      0.65
+    ); /* Adjust hover background for better readability */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12); /* Adjust hover shadow for subtlety */
+    transform: translateY(
+      -1px
+    ); /* Lesser lift effect for better performance on mobile devices */
+  }
+}

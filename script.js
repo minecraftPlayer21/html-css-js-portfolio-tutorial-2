@@ -269,3 +269,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   type(); // Start the typing effect
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("typed-about")) {
+    new Typed("#typed-about", {
+      strings: ["Engineer", "Developer", "Creator"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+  }
+
+  if (document.getElementById("project-title")) {
+    new Typed("#project-title", {
+      strings: ["My Projects", "Recent Work", "Portfolio Highlights"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+  }
+
+  if (document.getElementById("blog-title")) {
+    new Typed("#blog-title", {
+      strings: ["Latest Blogs", "Recent Articles", "Insights and Updates"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+  }
+});
