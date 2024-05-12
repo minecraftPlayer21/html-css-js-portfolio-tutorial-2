@@ -752,7 +752,7 @@ body {
   border-radius: 25px;
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(60, 179, 113, 0.6); /* Mint green border */
+  border: 2px solid rgba(43, 47, 45, 0.6); /* Mint green border */
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -764,4 +764,8 @@ body {
   background-color: rgba(245, 255, 250, 0.7);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
+}
+
+.dark-pink-text {
+  color: #c71585; /* This is a dark pink color */
 }

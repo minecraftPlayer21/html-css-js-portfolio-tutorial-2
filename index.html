@@ -7,6 +7,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
   </head>
   <body>
     <div id="particles-js"></div> <!-- Particle container -->
@@ -89,7 +91,7 @@
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title"><span id="typed-about"></span><span class="cursor-about">|</span></h1>
   <!-- Your existing content -->
-      <div class="section-container">
+      <div class="section-container" data-aos="fade-up">
         <div class="section__pic-container">
           <img
             src="./assets/IMG_0778.jpg"
@@ -277,7 +279,7 @@
     </section>
     <section id="projects" class="float-effect">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <h1 class="title"><span id="project-title"></span><span class="cursor">|</span></h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container pink-transparent">
@@ -372,7 +374,7 @@
 <!-- Blogs Section Start -->
 <section id="blogs" class="float-effect">
   <p class="section__text__p1">Check Out My</p>
-  <h1 class="title">Latest Blogs</h1>
+  <h1 class="title"><span id="blog-title"></span><span class="cursor">|</span></h1>
   <div class="blogs-details-container">
     <div class="about-containers">
       <!-- Example Blog Entry -->
@@ -477,6 +479,14 @@
     <script src="particles.min.js"></script>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // You can customize the settings here
+        duration: 1200, // controls animation duration
+        once: true, // means animation will only play once on scroll
+      });
+    </script>
 
   </body>
 </html>
