@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
       color: {
-        value: "#000000", // Grey color for particles
+        value: "#c71585", // Grey color for particles
       },
       shape: {
         type: "star", // Shape of the particles
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
       opacity: {
-        value: 0.9,
+        value: 1.2,
         random: false,
         anim: {
           enable: false,
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       line_linked: {
         enable: true,
         distance: 150,
-        color: "#cccccc",
+        color: "#F4C2C2",
         opacity: 0.7,
         width: 2,
       },

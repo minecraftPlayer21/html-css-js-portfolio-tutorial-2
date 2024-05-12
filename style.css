@@ -642,3 +642,116 @@ body {
 .details-container:hover {
   animation: scale-up 0.3s ease forwards; /* Make the animation play forwards and stick to the end state */
 }
+
+/* Static transparent color for the first frontend development box */
+.frontend-dev-1 {
+  background-color: rgba(
+    247,
+    247,
+    247,
+    0.5
+  ); /* Light pink with 50% transparency */
+}
+
+/* Static transparent color for the second frontend development box */
+.frontend-dev-2 {
+  background-color: rgba(
+    247,
+    247,
+    247,
+    0.5
+  ); /* Darker pink with 50% transparency */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly lower */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.details-container {
+  background-color: rgba(
+    255,
+    192,
+    203,
+    0.5
+  ); /* Light pink with 50% transparency */
+  padding: 15px; /* Adjust padding as needed */
+  border-radius: 10px; /* Optional, for rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional, adds a subtle shadow */
+}
+.details-container h3,
+.details-container p {
+  color: #333; /* Darker text color for better readability */
+}
+
+/* Keyframes for more radiant pink glow */
+@keyframes pinkGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(255, 20, 147, 0.5); /* Light pink with adjusted color for more intensity */
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.8); /* More vivid and wider glow */
+  }
+}
+
+/* Applying the updated glow effect to the about-pic */
+.about-pic {
+  border-radius: 2rem;
+  animation: fadeInOut 3s ease-in-out infinite, pinkGlow 4s infinite ease-in-out; /* Slower animation for more noticeable effect */
+}
+
+/* Keyframes for a subtle floating effect */
+@keyframes subtleFloat {
+  0%,
+  100% {
+    transform: translate(0, -5px); /* Up 5 pixels */
+  }
+  50% {
+    transform: translate(0, 5px); /* Down 5 pixels */
+  }
+}
+
+/* Applying the float effect to the Experience and Education details containers */
+.details-container {
+  animation: subtleFloat 6s infinite ease-in-out; /* Gentle and slow float */
+}
+.centered-paragraph {
+  text-align: center;
+}
+
+.pink-transparent {
+  background-color: rgba(
+    255,
+    235,
+    245,
+    0.1
+  ); /* Extremely light pink with 50% transparency */
+  border-radius: 25px; /* Smooth rounded corners for a soft look */
+  padding: 1rem; /* Padding inside the container for content spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow for a 3D effect */
+  border: 2px solid rgba(105, 8, 52, 0.6); /* Very light pink border that complements the background */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center aligns the content vertically and horizontally */
+  justify-content: center;
+}
+
+.pink-transparent:hover {
+  background-color: rgba(
+    255,
+    235,
+    245,
+    0.7
+  ); /* Slightly less transparent on hover for a highlight effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover for more depth */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}

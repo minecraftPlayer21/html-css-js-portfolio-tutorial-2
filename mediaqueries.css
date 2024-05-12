@@ -141,3 +141,54 @@
     margin-bottom: 1rem;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .details-container {
+    background-color: rgba(
+      255,
+      192,
+      203,
+      0.7
+    ); /* Slightly less transparent for better readability on smaller screens */
+  }
+}
+/* General Media Queries - Make sure to adjust these breakpoints to match your specific layout needs */
+
+@media screen and (max-width: 1200px) {
+  .pink-transparent {
+    /* Adjust padding, margins, or other properties for smaller screens */
+    padding: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pink-transparent {
+    /* Further adjust for smaller devices */
+    padding: 0.5rem;
+    border-radius: 15px; /* Smaller radius for smaller screens */
+  }
+
+  .pink-transparent:hover {
+    transform: translateY(
+      -1px
+    ); /* Lesser lift effect for better performance on mobile devices */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pink-transparent {
+    /* Adjust for very small screens such as mobile phones */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lesser shadow for subtlety on small devices */
+    border: 1px solid rgba(255, 210, 230, 0.6); /* Thinner border for a finer look */
+  }
+
+  .pink-transparent:hover {
+    background-color: rgba(
+      255,
+      235,
+      245,
+      0.65
+    ); /* Adjust hover background for better readability */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12); /* Adjust hover shadow for subtlety */
+  }
+}
