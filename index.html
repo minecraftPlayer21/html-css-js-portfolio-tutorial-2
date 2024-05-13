@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
 
   </head>
   <body>
    
   
 
-
+    <div id="three-canvas-container"></div>
     <div id="particles-js"></div> <!-- Particle container -->
     
 
@@ -496,6 +497,55 @@
         once: true, // means animation will only play once on scroll
       });
     </script>
+    <script>
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 30;
+  
+      const renderer = new THREE.WebGLRenderer({ alpha: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.getElementById('three-canvas-container').appendChild(renderer.domElement);
+      renderer.setClearColor(0x000000, 0); // Set clear color to transparent
+  
+      // Create shapes with adjusted material properties for light pink color
+      const geometry1 = new THREE.TorusGeometry(10, 3, 16, 100);
+      const geometry2 = new THREE.BoxGeometry(10, 10, 10);
+      const material = new THREE.MeshPhongMaterial({
+          color: 0xFFC0CB, // Light pink color
+          specular: 0xFEFEFE, // Soft white specular highlight
+          shininess: 10, // Low shininess for a subtle effect
+          opacity: 0.5,    
+          transparent: true
+      });
+  
+      const torus = new THREE.Mesh(geometry1, material);
+      const box = new THREE.Mesh(geometry2, material);
+  
+      scene.add(torus);
+      scene.add(box);
+  
+      // Add a light pinkish light to complement the material
+      const light = new THREE.DirectionalLight(0xFFF0F5, 0.7); // Soft pink-white light
+      light.position.set(0, 1, 1);
+      scene.add(light);
+  
+      function animate() {
+          requestAnimationFrame(animate);
+          torus.rotation.x += 0.01;
+          torus.rotation.y += 0.01;
+          box.rotation.x -= 0.01;
+          box.rotation.y -= 0.01;
+          renderer.render(scene, camera);
+      }
+      animate();
+  
+      window.addEventListener('resize', () => {
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+      });
+  </script>
+  
 
   </body>
 </html>
