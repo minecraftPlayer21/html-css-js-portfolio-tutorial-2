@@ -799,3 +799,8 @@ body {
   z-index: -1; /* Behind other content */
   pointer-events: none; /* Allows clicks to pass through */
 }
+.heart {
+  position: absolute;
+  width: 50px; /* Adjust size as needed */
+  top: -60px; /* Start slightly above the screen */
+}

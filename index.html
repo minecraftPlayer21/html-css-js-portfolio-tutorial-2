@@ -12,7 +12,8 @@
 
   </head>
   <body>
-   
+    
+  
   
 
     <div id="three-canvas-container"></div>
@@ -399,7 +400,7 @@
           How I Started With Frontend Development
         </h2>
         <p class="blog-description">
-          A brief journey through my initial steps in the world of frontend development, covering the challenges and milestones. This post explores the tools and resources that helped me get started and the projects that I tackled. Additionally, it outlines my plans for future projects and development goals.
+          A brief journey through my initial steps in the world of frontend development, covering the challenges and milestones. This post explores the tools and resources that helped me get started and the projects that I tackled. Additionally, it outlines my plans for future projects and development goals. (UNDER POST 1)
         </p>
         <div class="btn-container">
           <button class="btn btn-color-2 blog-btn" onclick="location.href='https://te751.wordpress.com/'">
@@ -420,10 +421,10 @@
           Design Tips for Developers
         </h2>
         <p class="blog-description">
-          (In Progress!)
+          In my blog, I explore the journey of building a coding portfolio from scratch, emphasizing the importance of starting simply, being consistent, and learning through doing. I discuss the evolution of my design skills, particularly in making my portfolio responsive and continuously updating its design as I learn. Future goals include collaborating with designers to enhance my projects and deepen my design knowledge. (UNDER POST 2)
         </p>
         <div class="btn-container">
-          <button class="btn btn-color-2 blog-btn" onclick="location.href='https://blog-link.com'">
+          <button class="btn btn-color-2 blog-btn" onclick="location.href='https://te751.wordpress.com/'">
             Read More
           </button>
         </div>
@@ -546,7 +547,57 @@
       });
   </script>
   
+  <div id="hearts-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 50;">
+   
+    <script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const container = document.getElementById('hearts-container');
+    const maxHearts = window.innerWidth > 768 ? 10 : 5;  // Fewer hearts on smaller screens
+    for (let i = 0; i < maxHearts; i++) {  // Dynamically determined number of hearts
+        let heart = document.createElement('img');
+        heart.src = 'assets/heart.png';  // Confirm this path is correct
+        heart.style.width = `${Math.random() * 20 + 30}px`; // Random width between 30px and 50px
+        heart.style.position = 'absolute';
+        heart.style.left = `${Math.random() * (window.innerWidth - 50)}px`; // Dynamic left positioning
+        heart.style.top = `${-Math.random() * 50}px`; // Start slightly above the viewport
+        container.appendChild(heart);
 
+        setTimeout(() => {
+            heart.style.transition = 'top 10s linear';  // Smooth linear fall
+            heart.style.top = `${window.innerHeight + 50}px`;  // Move below the viewport
+        }, Math.random() * 1000);  // Up to 1 second delay
+    }
+});
+
+
+
+      </script>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const container = document.getElementById('hearts-container');
+    const maxHearts = window.innerWidth > 768 ? 10 : 5; // Fewer hearts on smaller screens
+    for (let i = 0; i < maxHearts; i++) {
+        let heart = document.createElement('img');
+        heart.src = 'assets/heart.png'; // Confirm this path is correct
+        heart.style.width = `${Math.random() * 20 + 30}px`; // Random width between 30px and 50px
+        heart.style.position = 'absolute';
+        heart.style.left = `${Math.random() * (window.innerWidth - 50)}px`; // Dynamic left positioning
+        heart.style.top = `${-Math.random() * 50}px`; // Start slightly above the viewport
+        container.appendChild(heart);
+
+        setTimeout(() => {
+            heart.style.transition = 'top 10s linear'; // Smooth linear fall
+            heart.style.top = `${window.innerHeight + 50}px`; // Move below the viewport
+        }, Math.random() * 1000); // Up to 1 second delay
+    }
+});
+      </script>
+      
+      
+      
+      
+        
   </body>
 </html>
 
