@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
       opacity: {
-        value: 1.2,
+        value: 1.5,
         random: false,
         anim: {
           enable: false,
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
       size: {
-        value: 5,
+        value: 7,
         random: true,
         anim: {
           enable: false,

@@ -540,9 +540,9 @@ a:hover,
 body {
   background: linear-gradient(
     to right,
-    #ece9e6,
-    #ffffff
-  ); /* Light gray to white gradient */
+    #fdeff9,
+    /* Very Light Pink */ #fff1f0 /* Light Blush */
+  );
   background-size: 800% 800%;
   animation: AnimatedGradient 15s ease infinite;
 }
