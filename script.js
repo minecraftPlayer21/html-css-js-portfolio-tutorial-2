@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
       color: {
-        value: "#c71585", // Grey color for particles
+        value: "#FF69B4", // Pink color for particles
       },
       shape: {
         type: "star", // Shape of the particles
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       line_linked: {
         enable: true,
         distance: 150,
-        color: "#F4C2C2",
+        color: "#696969", // Dark gray (lighter black) for links
         opacity: 0.7,
         width: 2,
       },
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const textArray = [
     "Frontend Developer",
     "Engineering Student",
-    "I Like To Create!",
+    "I Like To Build!",
   ];
   const typingDelay = 100;
   const erasingDelay = 75;
@@ -317,14 +317,14 @@ document.addEventListener("DOMContentLoaded", function () {
   setupTypingEffect(
     "project-title",
     "Projects",
-    ["Featured Projects", "Recent Works", "Portfolio Highlights"],
+    ["Featured Projects", "Recent Works", "Portfolio Highlights!"],
     2000
   );
   // Define the phrases and start the typing effect for Blogs
   setupTypingEffect(
     "blog-title",
     "Latest Blogs",
-    ["Insights", "Latest Articles", "Tech Thoughts"],
+    ["Insights", "Latest Articles!", "My Tips..."],
     2000
   );
 });
