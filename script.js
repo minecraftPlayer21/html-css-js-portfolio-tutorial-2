@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const textArray = [
     "Frontend Developer",
+    "Backend Developer",
     "Engineering Student",
     "I Like To Build!",
   ];
