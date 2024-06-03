@@ -163,7 +163,6 @@ section {
 }
 
 /* PROFILE SECTION */
-
 #profile {
   display: flex;
   justify-content: center;
@@ -798,4 +797,9 @@ body {
   height: 100%;
   z-index: -1; /* Behind other content */
   pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s ease-in-out;
 }
