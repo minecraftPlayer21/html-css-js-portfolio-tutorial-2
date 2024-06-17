@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
     
+    
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.1/bundled/lenis.min.js"></script>
-    
+   
   </head>
   <body>
    
- 
+    
  
 
     <div id="three-canvas-container"></div>
@@ -304,99 +304,56 @@
       />
     </section>
   
-    <section id="projects" class="float-effect">
+    <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title"><span id="project-title"></span><span class="cursor">|</span></h1>
-      <div class="experience-details-container">
+      <div class="projects-details-container">
         <div class="about-containers">
           <div class="details-container pink-transparent" data-aos="fade-right" data-aos-delay="100">
             <div class="article-container">
-              <img
-                src="./assets/Picture1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+              <img src="./assets/Picture1.png" alt="Project 1" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">
-              Project One - My Coding Portfolio
-            </h2>
+            <h2 class="experience-sub-title project-title">Project One - My Coding Portfolio</h2>
+            <p class="project-description">
+              This project showcases my coding portfolio. It includes various projects I have worked on, each demonstrating different skills and technologies I have learned.
+            </p>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://sensational-taiyaki-14bec4.netlify.app/#projects'"
-              >
-                Live Demo
-              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://sensational-taiyaki-14bec4.netlify.app/#projects'">Live Demo</button>
             </div>
           </div>
           <div class="details-container pink-transparent" data-aos="fade-right" data-aos-delay="200">
             <div class="article-container">
-              <img
-                src="./assets/Picture7.png"
-                alt="Project 2"
-                class="project-img"
-              />
+              <img src="./assets/Picture7.png" alt="Project 2" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">
-              Project Two (In Progress)
-            </h2>
+            <h2 class="experience-sub-title project-title">Project Two (In Progress)</h2>
+            <p class="project-description">
+              This is an ongoing project where I am exploring new technologies and enhancing my skills in frontend development.
+
+            </p>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
             </div>
           </div>
           <div class="details-container pink-transparent" data-aos="fade-right" data-aos-delay="300">
             <div class="article-container">
-              <img
-                src="./assets/Picture7.png"
-                alt="Project 3"
-                class="project-img"
-              />
+              <img src="./assets/Picture7.png" alt="Project 3" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">
-              Project Three (In Progress)
-            </h2>
+            <h2 class="experience-sub-title project-title">Project Three (In Progress)</h2>
+            <p class="project-description">
+              This project focuses on creating interactive web applications with advanced JavaScript frameworks and libraries.
+            </p>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
     </section>
-  
+    
 
 
 
@@ -525,119 +482,301 @@
       });
     </script>
     <script>
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.z = 30;
- 
-      const renderer = new THREE.WebGLRenderer({ alpha: true });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.getElementById('three-canvas-container').appendChild(renderer.domElement);
-      renderer.setClearColor(0x000000, 0); // Set clear color to transparent
- 
-      // Create shapes with adjusted material properties for light pink color
-      const geometry1 = new THREE.TorusGeometry(10, 3, 16, 100);
-      const geometry2 = new THREE.BoxGeometry(10, 10, 10);
-      const material = new THREE.MeshPhongMaterial({
-          color: 0xFFC0CB, // Light pink color
-          specular: 0xFEFEFE, // Soft white specular highlight
-          shininess: 10, // Low shininess for a subtle effect
-          opacity: 0.5,    
-          transparent: true
-      });
- 
-      const torus = new THREE.Mesh(geometry1, material);
-      const box = new THREE.Mesh(geometry2, material);
- 
-      scene.add(torus);
-      scene.add(box);
- 
-      // Add a light pinkish light to complement the material
-      const light = new THREE.DirectionalLight(0xFFF0F5, 0.7); // Soft pink-white light
-      light.position.set(0, 1, 1);
-      scene.add(light);
- 
-      function animate() {
-          requestAnimationFrame(animate);
-          torus.rotation.x += 0.01;
-          torus.rotation.y += 0.01;
-          box.rotation.x -= 0.01;
-          box.rotation.y -= 0.01;
-          renderer.render(scene, camera);
+ document.addEventListener('DOMContentLoaded', () => {
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 30;
+
+  const renderer = new THREE.WebGLRenderer({ alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.getElementById('three-canvas-container').appendChild(renderer.domElement);
+  renderer.setClearColor(0x000000, 0);
+
+  // Create torus and cube
+  const geometryTorus = new THREE.TorusGeometry(10, 3, 16, 100);
+  const geometryCube = new THREE.BoxGeometry(10, 10, 10);
+  const materialTorus = new THREE.MeshPhongMaterial({ color: 0xFFC0CB, opacity: 0.5, transparent: true });
+  const materialCube = new THREE.MeshPhongMaterial({ color: 0xFFFFFF, opacity: 0.5, transparent: true });
+
+  const torus = new THREE.Mesh(geometryTorus, materialTorus);
+  const cube = new THREE.Mesh(geometryCube, materialCube);
+
+  scene.add(torus);
+  scene.add(cube);
+
+  // Add multiple light sources
+  const light1 = new THREE.DirectionalLight(0xFFF0F5, 0.7);
+  light1.position.set(0, 1, 1);
+  scene.add(light1);
+
+  const light2 = new THREE.PointLight(0xFF6347, 1, 100);
+  light2.position.set(-50, 50, 50);
+  scene.add(light2);
+
+  const light3 = new THREE.PointLight(0x1E90FF, 1, 100);
+  light3.position.set(50, -50, -50);
+  scene.add(light3);
+
+  // Animate light positions
+  function animateLights() {
+    gsap.to(light2.position, { x: 50, y: 50, z: 50, duration: 5, repeat: -1, yoyo: true, ease: "power2.inOut" });
+    gsap.to(light3.position, { x: -50, y: -50, z: -50, duration: 5, repeat: -1, yoyo: true, ease: "power2.inOut" });
+  }
+  animateLights();
+
+  function animate() {
+    requestAnimationFrame(animate);
+    torus.rotation.x += 0.01;
+    torus.rotation.y += 0.01;
+    cube.rotation.x -= 0.01;
+    cube.rotation.y -= 0.01;
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Function to create transition animations
+  function createTransition(trigger, torusColor, cubeColor) {
+    ScrollTrigger.create({
+      trigger: trigger,
+      start: "top 80%",
+      end: "top 50%",
+      toggleActions: "play none none reverse",
+      scrub: true,
+      markers: false, // Disable markers to debug
+      onEnter: () => {
+        gsap.to(torus.material.color, { r: torusColor.r / 255, g: torusColor.g / 255, b: torusColor.b / 255, duration: 1, ease: "power2.inOut" });
+        gsap.to(cube.material.color, { r: cubeColor.r / 255, g: cubeColor.g / 255, b: cubeColor.b / 255, duration: 1, ease: "power2.inOut" });
+      },
+      onLeaveBack: () => {
+        gsap.to(torus.material.color, { r: 255 / 255, g: 192 / 255, b: 203 / 255, duration: 1, ease: "power2.inOut" });
+        gsap.to(cube.material.color, { r: 255 / 255, g: 255 / 255, b: 255 / 255, duration: 1, ease: "power2.inOut" });
       }
-      animate();
- 
-      window.addEventListener('resize', () => {
-          renderer.setSize(window.innerWidth, window.innerHeight);
-          camera.aspect = window.innerWidth / window.innerHeight;
-          camera.updateProjectionMatrix();
-      });
+    });
+  }
+
+  // Create transitions for sections
+  createTransition("#profile", { r: 255, g: 192, b: 203 }, { r: 255, g: 255, b: 255 });  // Profile: Default colors
+  createTransition("#about", { r: 173, g: 216, b: 230 }, { r: 240, g: 128, b: 128 });  // About: Light Blue Torus, Light Coral Cube
+  createTransition("#experience", { r: 144, g: 238, b: 144 }, { r: 255, g: 215, b: 0 });  // Experience: Light Green Torus, Gold Cube
+  createTransition("#projects", { r: 255, g: 105, b: 180 }, { r: 70, g: 130, b: 180 });  // Projects: Hot Pink Torus, Steel Blue Cube
+  createTransition("#contact", { r: 255, g: 20, b: 147 }, { r: 75, g: 0, b: 130 });  // Contact: Deep Pink Torus, Indigo Cube
+
+  // Dynamic color animation
+  function animateColors() {
+    gsap.to(torus.material.color, { r: Math.random(), g: Math.random(), b: Math.random(), duration: 2, ease: "linear", repeat: -1, yoyo: true });
+    gsap.to(cube.material.color, { r: Math.random(), g: Math.random(), b: Math.random(), duration: 2, ease: "linear", repeat: -1, yoyo: true });
+  }
+  animateColors();
+
+
+  
+});
+
   </script>
  
  
  <script>
-  gsap.registerPlugin(ScrollTrigger);
+  // Initial animation for the profile section using Anime.js
+  /*anime({
+            targets: '#profile .section__pic-container',
+            scale: [0.5, 1],
+            opacity: [0, 1],
+            easing: 'easeOutExpo',
+            duration: 2000
+        });
 
-const profileTimeline = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top 80%",
-    end: "top 50%",
-    scrub: 2, // This value controls the smoothness of the forward animation
-    markers: false,
-    toggleActions: "play none none reverse",
-    ease: "power1.inOut",
-    onUpdate: (self) => {
-      if (self.direction === -1) {
-        // When scrolling up (reverse direction), reduce the scrub value for faster animation
-        self.scrub = 0.5;
-      } else {
-        // When scrolling down (forward direction), set the scrub value back to normal
-        self.scrub = 2;
-      }
-    }
-  }
+        anime({
+            targets: '#profile .section__text',
+            translateX: [-100, 0],
+            opacity: [0, 1],
+            easing: 'easeOutExpo',
+            duration: 2000,
+            delay: 500
+        });
+        */
+
+  // Scroll-triggered animation for the profile section using GSAP
+  gsap.to("#profile", {
+            x: -200,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top 80%",
+                end: "top 50%",
+                toggleActions: "play none none reverse",
+                scrub: true,
+                markers: false // Enable markers to debug
+            }
+        });
+
+        
+  
+</script>
+<!--
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  gsap.timeline({ repeat: -1, yoyo: true })
+    .to("body", { backgroundPosition: "100% 50%", duration: 10, ease: "linear" })
+    .to("body", { backgroundPosition: "0% 50%", duration: 10, ease: "linear" });
 });
 
-profileTimeline
-  .to("#profile", {
-    x: -200,
-    scale: 0.8,
-    opacity: 0.8,
-    rotation: 15,
-    backgroundColor: "#ffaaaa",
-    borderColor: "#ff0000",
-    boxShadow: "0 0 20px rgba(255, 0, 0, 0.5)",
-    duration: 2,
-    ease: "power1.inOut"
-  })
-  .to("#profile", {
-    x: -400,
-    scale: 0.5,
-    opacity: 0.5,
-    rotation: -15,
-    backgroundColor: "#aaaaff",
-    borderColor: "#0000ff",
-    boxShadow: "0 0 20px rgba(0, 0, 255, 0.5)",
-    duration: 2,
-    ease: "power1.inOut"
-  })
-  .to("#profile", {
-    x: -600,
-    scale: 0.2,
-    opacity: 0.2,
-    rotation: 0,
-    backgroundColor: "#aaffaa",
-    borderColor: "#00ff00",
-    boxShadow: "0 0 20px rgba(0, 255, 0, 0.5)",
-    duration: 2,
-    ease: "power1.inOut"
+</script>
+-->
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Function to create the animations
+  function animateElements() {
+    // Animation for the logo
+    gsap.to('.logo', {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power2.out",
+      delay: 0.5 // Delay to make the logo appear after a short moment
+    });
+
+    // Animation for the hamburger icon
+    gsap.to('.hamburger-icon', {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power2.out",
+      delay: 0.7 // Delay to make the hamburger icon appear after a short moment
+    });
+
+    // Animation for the nav-links in desktop nav
+    gsap.to('.nav-links li', {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power2.out",
+      delay: 0.9, // Delay to start after the logo
+      stagger: 0.2 // Stagger animation for each item
+    });
+
+    // Animation for the menu-links in hamburger nav
+    gsap.to('.menu-links li', {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power2.out",
+      delay: 0.9, // Delay to start after the logo
+      stagger: 0.2 // Stagger animation for each item
+    });
+  }
+
+  // Initial animation when the page loads
+  animateElements();
+
+  // Scroll-triggered animation for scrolling up
+  ScrollTrigger.create({
+    trigger: 'body',
+    start: 'top top',
+    end: 'top top',
+    onEnterBack: animateElements,
+    markers: false
+  });
+});
+
+
+
+
+</script>
+
+<script>
+  
+  // script.js
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Simple fade-in and slide-up for #about section
+  gsap.from("#about", {
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top 80%",
+      end: "top 50%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out"
+  });
+
+  // Additional animations for elements within the #about section
+  gsap.from("#about h1", {
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+    },
+    y: 20,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    delay: 0.2
+  });
+
+  gsap.from("#about p", {
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+    },
+    y: 20,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    delay: 0.4
+  });
+});
+
+// Additional animations for elements within the #experience section
+gsap.from("#experience h1", {
+    scrollTrigger: {
+      trigger: "#experience",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+    },
+    x: -20,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    delay: 0.2
+  });
+
+  gsap.from("#experience p", {
+    scrollTrigger: {
+      trigger: "#experience",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+    },
+    x: -20,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    delay: 0.4
   });
 
   
+
 </script>
 
-       
   </body>
+  
 </html>
 
 

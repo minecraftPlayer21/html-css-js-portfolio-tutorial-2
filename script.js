@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       line_linked: {
         enable: true,
         distance: 150,
-        color: "#696969", // Dark gray (lighter black) for links
+        color: "#000000", // Dark gray (lighter black) for links
         opacity: 0.7,
         width: 2,
       },
