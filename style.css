@@ -866,7 +866,6 @@ body {
   line-height: 1.6; /* Better readability */
 }
 
-/* Add this to your CSS */
 body,
 html {
   margin: 0;
@@ -886,74 +885,182 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #000; /* Solid black background */
   z-index: 9999; /* Ensure it is above other content */
 }
 
-.iphone-frame {
-  width: 300px; /* Increased size for more realism */
-  height: 600px;
-  background: #fff;
-  border-radius: 40px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  border: 2px solid #000;
+.iphone-x {
   position: relative;
+  z-index: 1;
+  height: 694px;
+  width: 342px;
+}
+.iphone-x *,
+.iphone-x *::before,
+.iphone-x *::after {
+  box-sizing: border-box;
+  display: block;
 }
 
-.notch {
+.iphone-x .side {
+  background: #1c1c1c;
+  border-radius: 54px;
+  box-shadow: inset 0 0 2px 2px dimgrey, inset 0 0 0 6px #e2e3e9,
+    0px -1px 13px 9px rgba(255, 255, 255, 0.8) inset;
+  height: 694px;
+  padding: 15px 22px;
+  width: 342px;
+  z-index: 1;
+}
+
+.iphone-x .screen {
+  background: transparent; /* Make the screen background transparent */
+  border-radius: 33px;
+  position: relative;
+  height: 652px;
+  width: 300px;
+  margin-left: -1px;
+  margin-top: 6px;
+  z-index: 198;
+  overflow: hidden;
+  pointer-events: none; /* Allow clicks to pass through the screen to the portfolio content */
+}
+
+.iphone-x .line::after,
+.iphone-x .line::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180px;
-  height: 30px;
-  background: #000;
-  border-radius: 0 0 20px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.camera {
-  width: 10px;
-  height: 10px;
-  background: #333;
-  border-radius: 50%;
-}
-
-.speaker {
-  width: 60px;
-  height: 6px;
-  background: #333;
-  border-radius: 10px;
-}
-
-.side-buttons {
-  position: absolute;
-  right: -10px;
-  top: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.button {
-  width: 4px;
-  height: 30px;
-  background: #333;
-  border-radius: 2px;
-}
-
-.bottom-bar {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
+  border: solid rgba(68, 68, 68, 0.25);
+  border-width: 0 6px;
   height: 5px;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.iphone-x .line::after {
+  top: 68px;
+}
+
+.iphone-x .line::before {
+  bottom: 68px;
+}
+
+.iphone-x .header {
+  background: #1c1c1c;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+  height: 24px;
+  left: 50%;
+  margin-left: -82px;
+  position: absolute;
+  top: 15px;
+  width: 164px;
+  z-index: 199;
+}
+
+.iphone-x .sensor-1::after,
+.iphone-x .sensor-1::before {
+  content: "";
+  position: absolute;
+}
+
+.iphone-x .sensor-1::after {
+  background: #222;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  left: 1%;
+  margin-left: 10px;
+  top: 3px;
+}
+
+.iphone-x .sensor-1::before {
+  background: #222;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  left: 10%;
+  margin-left: 20px;
+  top: 3px;
+}
+
+.iphone-x .sensor-2::after,
+.iphone-x .sensor-2::before {
+  content: "";
+  position: absolute;
+}
+
+.iphone-x .sensor-2::before {
   background: #333;
-  border-radius: 10px;
+  border-radius: 2.5px;
+  height: 5px;
+  width: 40px;
+  left: 50%;
+  margin-left: -20px;
+  top: 7px;
+}
+
+.iphone-x .sensor-3::after,
+.iphone-x .sensor-3::before {
+  content: "";
+  position: absolute;
+}
+
+.iphone-x .sensor-3::before {
+  background: #444;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  left: 50%;
+  margin-left: 35px;
+  top: 3px;
+  box-shadow: 0px 0px 5px 2px navy inset;
+}
+
+.iphone-x .sensor-3::after {
+  background: #222;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  left: 65%;
+  margin-left: 33px;
+}
+
+.iphone-x .volume-button {
+  background: #c8cacb;
+  height: 26px;
+  left: -2px;
+  position: absolute;
+  top: 92px;
+  width: 3px;
+}
+
+.iphone-x .volume-button::after,
+.iphone-x .volume-button::before {
+  content: "";
+  position: absolute;
+  background: #c8cacb;
+  height: 50px;
+  left: 0;
+  width: 3px;
+}
+
+.iphone-x .volume-button::after {
+  top: 48px;
+}
+
+.iphone-x .volume-button::before {
+  top: 112px;
+}
+
+.iphone-x .power-button {
+  background: #c8cacb;
+  height: 80px;
+  right: -2px;
+  position: absolute;
+  top: 160px;
+  width: 3px;
 }
 
 .portfolio-content {
@@ -962,4 +1069,117 @@ html {
   height: 100vh; /* Ensure full viewport height */
   width: 100%; /* Ensure full width */
   position: relative; /* Make sure it's relative to the viewport */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .iphone-x {
+    height: 550px;
+    width: 280px;
+  }
+
+  .iphone-x .side {
+    height: 550px;
+    width: 280px;
+    border-radius: 40px;
+    padding: 12px 18px;
+  }
+
+  .iphone-x .screen {
+    height: 510px;
+    width: 250px;
+    border-radius: 25px;
+  }
+
+  .iphone-x .header {
+    height: 20px;
+    width: 140px;
+    margin-left: -70px;
+  }
+
+  .iphone-x .sensor-1::after,
+  .iphone-x .sensor-1::before,
+  .iphone-x .sensor-2::before,
+  .iphone-x .sensor-3::before,
+  .iphone-x .sensor-3::after {
+    height: 9px;
+    width: 9px;
+  }
+
+  .iphone-x .sensor-2::before {
+    width: 35px;
+  }
+
+  .iphone-x .volume-button,
+  .iphone-x .volume-button::after,
+  .iphone-x .volume-button::before,
+  .iphone-x .power-button {
+    height: 22px;
+    width: 2.5px;
+  }
+
+  .iphone-x .volume-button::after,
+  .iphone-x .volume-button::before {
+    height: 45px;
+  }
+
+  .iphone-x .power-button {
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .iphone-x {
+    height: 500px;
+    width: 250px;
+  }
+
+  .iphone-x .side {
+    height: 500px;
+    width: 250px;
+    border-radius: 30px;
+    padding: 10px 15px;
+  }
+
+  .iphone-x .screen {
+    height: 460px;
+    width: 200px;
+    border-radius: 20px;
+  }
+
+  .iphone-x .header {
+    height: 18px;
+    width: 120px;
+    margin-left: -60px;
+  }
+
+  .iphone-x .sensor-1::after,
+  .iphone-x .sensor-1::before,
+  .iphone-x .sensor-2::before,
+  .iphone-x .sensor-3::before,
+  .iphone-x .sensor-3::after {
+    height: 8px;
+    width: 8px;
+  }
+
+  .iphone-x .sensor-2::before {
+    width: 30px;
+  }
+
+  .iphone-x .volume-button,
+  .iphone-x .volume-button::after,
+  .iphone-x .volume-button::before,
+  .iphone-x .power-button {
+    height: 18px;
+    width: 2.5px;
+  }
+
+  .iphone-x .volume-button::after,
+  .iphone-x .volume-button::before {
+    height: 35px;
+  }
+
+  .iphone-x .power-button {
+    height: 60px;
+  }
 }

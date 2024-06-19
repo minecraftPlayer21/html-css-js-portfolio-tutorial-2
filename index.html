@@ -20,22 +20,27 @@
    
   </head>
   <body>
+
+    
    
-<!-- Initial iPhone frame -->
-<div class="iphone-overlay">
-  <div class="iphone-frame">
-      <div class="notch">
-          <div class="camera"></div>
-          <div class="speaker"></div>
+    <div class="iphone-overlay">
+      <div class="iphone-x">
+        <div class="side">
+          <div class="screen">
+           
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="header">
+          <div class="sensor-1"></div>
+          <div class="sensor-2"></div>
+          <div class="sensor-3"></div>
+        </div>
+        <div class="volume-button"></div>
+        <div class="power-button"></div>
       </div>
-      <div class="side-buttons">
-          <div class="button button-top"></div>
-          <div class="button button-middle"></div>
-          <div class="button button-bottom"></div>
-      </div>
-      <div class="bottom-bar"></div>
-  </div>
-</div>
+    </div>
+   
 
 
 
@@ -711,174 +716,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 
-<script>
-  
-  // script.js
-document.addEventListener('DOMContentLoaded', () => {
-  gsap.registerPlugin(ScrollTrigger);
 
-  // Simple fade-in and slide-up for #about section
-  gsap.from("#about", {
-    scrollTrigger: {
-      trigger: "#about",
-      start: "top 80%",
-      end: "top 50%",
-      toggleActions: "play none none reverse",
-    },
-    y: 50,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out"
-  });
-
-  // Additional animations for elements within the #about section
-  gsap.from("#about h1", {
-    scrollTrigger: {
-      trigger: "#about",
-      start: "top 70%",
-      toggleActions: "play none none reverse",
-    },
-    y: 20,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    delay: 0.2
-  });
-
-  gsap.from("#about p", {
-    scrollTrigger: {
-      trigger: "#about",
-      start: "top 70%",
-      toggleActions: "play none none reverse",
-    },
-    y: 20,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    delay: 0.4
-  });
-});
-
-// Additional animations for elements within the #experience section
-gsap.from("#experience h1", {
-    scrollTrigger: {
-      trigger: "#experience",
-      start: "top 70%",
-      toggleActions: "play none none reverse",
-    },
-    x: -20,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    delay: 0.2
-  });
-
-  gsap.from("#experience p", {
-    scrollTrigger: {
-      trigger: "#experience",
-      start: "top 70%",
-      toggleActions: "play none none reverse",
-    },
-    x: -20,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    delay: 0.4
-  });
 
   
-
-</script>
-<script>// Add this to your JavaScript
-  document.addEventListener('DOMContentLoaded', () => {
-    gsap.registerPlugin(ScrollTrigger);
+  <script>
+  window.onload = function() {
+    const iphoneOverlay = document.querySelector('.iphone-overlay');
+    const portfolioContent = document.querySelector('.portfolio-content');
   
-    const stars = document.querySelectorAll('.star');
-  
-    stars.forEach((star, i) => {
-      // Set initial position
-      gsap.set(star, {
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        scale: Math.random() * 0.5 + 0.5,
-        backgroundColor: getRandomColor()
-      });
-  
-      // Animate each star
-      gsap.to(star, {
-        y: `+=${Math.random() * 100 - 50}`,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-        duration: Math.random() * 3 + 2,
-        delay: i * 0.1
-      });
-  
-      gsap.to(star, {
-        x: `+=${Math.random() * 100 - 50}`,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-        duration: Math.random() * 3 + 2,
-        delay: i * 0.1
-      });
-  
-      gsap.to(star, {
-        opacity: Math.random() * 0.5 + 0.5,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-        duration: Math.random() * 3 + 2,
-        delay: i * 0.1
-      });
-  
-      // Color changing animation
-      gsap.to(star, {
-        backgroundColor: getRandomColor(),
-        repeat: -1,
-        yoyo: true,
+    setTimeout(() => {
+      gsap.to('.iphone-overlay', {
+        scale: 8,
+        opacity: 0,
+        duration: 1.2,
         ease: 'power2.inOut',
-        duration: Math.random() * 3 + 2,
-        delay: i * 0.1
+        onComplete: () => {
+          iphoneOverlay.style.display = 'none';
+          portfolioContent.style.display = 'block';
+          gsap.fromTo(
+            portfolioContent,
+            { opacity: 0 },
+            { opacity: 1, duration: 1.2 }
+          );
+          document.body.style.overflow = 'auto';
+        },
       });
-    });
+    }, 2000);
+  };
   
-    // Function to get a random color
-    function getRandomColor() {
-      const colors = ['#FF69B4', '#FFD700', '#1E90FF', '#32CD32', '#FFA500', '#8A2BE2'];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-  });
-  </script>
   
-  <script>// Add this to your JavaScript
-    document.addEventListener('DOMContentLoaded', () => {
-        // Animate the iPhone frame
-        gsap.to('.iphone-frame', {
-            scale: 10,
-            x: '-50%',
-            y: '-50%',
-            duration: 1.5, // Duration of the transition
-            ease: 'power1.inOut',
-            onComplete: () => {
-                document.querySelector('.iphone-overlay').style.display = 'none';
-                document.querySelector('.portfolio-content').style.display = 'block';
-                document.body.style.overflow = 'auto'; // Enable scrolling on the body
-            }
-        });
-    
-        // Optional: Fade in the portfolio content
-        gsap.from('.portfolio-content', {
-            opacity: 0,
-            duration: 0.5,
-            delay: 1.5 // Matches the duration of the iPhone frame animation
-        });
-    });
-    
-    
-    
-    
-    
     
     
     </script>
