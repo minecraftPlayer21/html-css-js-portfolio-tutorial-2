@@ -580,3 +580,62 @@
     height: 30px;
   }
 }
+
+/* Media Queries for different screen sizes */
+
+/* Large devices (desktops, laptops) */
+@media (min-width: 1200px) {
+  #console-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  #console-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small devices (landscape phones) */
+@media (max-width: 767px) and (min-width: 576px) {
+  #console-text {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices (portrait phones) */
+@media (max-width: 575px) and (min-width: 320px) {
+  #console-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* Very small devices (older phones, small screens) */
+@media (max-width: 319px) {
+  #console-text {
+    font-size: 0.7rem;
+  }
+}
+
+/* Specific media query for iPhone 5 and similar devices */
+@media (max-width: 320px) {
+  #console-container {
+    padding: 10px;
+  }
+
+  #console-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Specific media query for older devices like Nokia */
+@media (max-width: 240px) {
+  #console-container {
+    padding: 5px;
+  }
+
+  #console-text {
+    font-size: 0.6rem;
+  }
+}

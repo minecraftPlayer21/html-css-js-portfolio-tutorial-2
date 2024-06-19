@@ -1183,3 +1183,50 @@ html {
     height: 60px;
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: visible; /* Prevent scrolling initially */
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+#console-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  background-color: black; /* Console background color */
+  color: green; /* Console text color */
+  font-family: monospace;
+  z-index: 1000; /* Ensure it is above other content */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px; /* Add padding to avoid text touching edges */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+#console {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; /* Center text horizontally */
+}
+
+#console-text {
+  font-size: 1.5rem;
+  white-space: pre; /* Preserve white spaces */
+  max-width: 100%; /* Ensure text wraps within container */
+  word-wrap: break-word; /* Break long words if necessary */
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0;
+  }
+}
