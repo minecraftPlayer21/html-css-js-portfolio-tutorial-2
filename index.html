@@ -21,11 +21,6 @@
   </head>
   <body>
 
-    <div id="console-container">
-      <div id="console">
-        <span id="console-text"></span>
-      </div>
-    </div>
     
     
    
@@ -722,107 +717,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   
-  <script>
+<script>
   window.onload = function() {
-    const iphoneOverlay = document.querySelector('.iphone-overlay');
-    const portfolioContent = document.querySelector('.portfolio-content');
+      const iphoneOverlay = document.querySelector('.iphone-overlay');
+      const portfolioContent = document.querySelector('.portfolio-content');
   
-    setTimeout(() => {
-      gsap.to('.iphone-overlay', {
-        scale: 8,
-        opacity: 0,
-        duration: 1.2,
-        ease: 'power2.inOut',
-        onComplete: () => {
-          iphoneOverlay.style.display = 'none';
-          portfolioContent.style.display = 'block';
-          gsap.fromTo(
-            portfolioContent,
-            { opacity: 0 },
-            { opacity: 1, duration: 1.2 }
-          );
-          document.body.style.overflow = 'auto';
-        },
-      });
-    }, 2000);
+      setTimeout(() => {
+          gsap.to('.iphone-overlay', {
+              scale: 8,
+              opacity: 0,
+              duration: 1.2,
+              ease: 'power2.inOut',
+              onComplete: () => {
+                  iphoneOverlay.style.display = 'none';
+                  portfolioContent.style.display = 'block';
+                  gsap.fromTo(
+                      portfolioContent,
+                      { opacity: 0 },
+                      { opacity: 1, duration: 1.2 }
+                  );
+                  document.body.style.overflow = 'auto';
+              },
+          });
+      }, 2000);
   };
+  </script>
   
-  
-    
-    
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          const consoleText = document.getElementById("console-text");
-          const messages = [
-              "Loading assets...",
-              "Initializing components...",
-              "Fetching data...",
-              "Almost there...",
-              "Welcome to Malak's portfolio!"
-          ];
-          let messageIndex = 0;
-          let charIndex = 0;
-          const typingSpeed = 50;
-          const messageDelay = 500;
-      
-          function typeMessage() {
-              if (charIndex < messages[messageIndex].length) {
-                  consoleText.textContent += messages[messageIndex].charAt(charIndex);
-                  charIndex++;
-                  setTimeout(typeMessage, typingSpeed);
-              } else {
-                  charIndex = 0;
-                  messageIndex++;
-                  if (messageIndex < messages.length) {
-                      setTimeout(() => {
-                          consoleText.textContent += "\n"; // Add a new line after each message
-                          typeMessage();
-                      }, messageDelay);
-                  } else {
-                      // Once all messages are displayed, fade out the console animation and show the iPhone overlay
-                      setTimeout(() => {
-                          gsap.to("#console-container", {
-                              opacity: 0,
-                              duration: 1,
-                              onComplete: () => {
-                                  document.getElementById("console-container").style.display = "none";
-                                  gsap.to(".iphone-overlay", {
-                                      scale: 1,
-                                      opacity: 1,
-                                      duration: 1,
-                                      ease: "power2.inOut",
-                                      onComplete: () => {
-                                          gsap.to(".iphone-overlay", {
-                                              scale: 8,
-                                              opacity: 0,
-                                              duration: 1.2,
-                                              ease: "power2.inOut",
-                                              onComplete: () => {
-                                                  document.querySelector('.iphone-overlay').style.display = 'none';
-                                                  document.querySelector('.portfolio-content').style.display = 'block';
-                                                  gsap.fromTo(
-                                                      document.querySelector('.portfolio-content'),
-                                                      { opacity: 0 },
-                                                      { opacity: 1, duration: 1.2 }
-                                                  );
-                                                  document.body.style.overflow = 'auto';
-                                              },
-                                          });
-                                      }
-                                  });
-                              }
-                          });
-                      }, messageDelay);
-                  }
-              }
-          }
-      
-          typeMessage();
-      });
-      </script>
-      
-    
       
   </body>
   
