@@ -5,6 +5,7 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+/*
 document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.getElementById("particleCanvas");
   const ctx = canvas.getContext("2d");
@@ -165,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+*/
 document.addEventListener("DOMContentLoaded", function () {
   const typedTextSpan = document.querySelector("#typed-text");
   const cursorSpan = document.createElement("span");
